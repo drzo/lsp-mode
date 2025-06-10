@@ -24,6 +24,13 @@ nav:
     - FAQ: page/faq.md
     - Troubleshooting: page/troubleshooting.md
     - Adding new language: page/adding-new-language.md
+    - Architecture:
+        - Introduction: page/architecture-index.md
+        - System Overview: page/architecture.md
+        - Protocol Layer: page/architecture-protocol.md
+        - Client Management: page/architecture-clients.md
+        - UI Integration: page/architecture-ui.md
+        - System Integration: page/architecture-integration.md
   - Settings:
     - Features:
       - Core: page/settings/mode.md
@@ -228,6 +235,8 @@ extra_css:
 
 extra_javascript:
   - js/expanded_nav.js
+  - https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js
+  - js/mermaid-init.js
 
 theme:
   name: material
@@ -252,7 +261,11 @@ repo_name: emacs-lsp/lsp-mode
 repo_url: https://github.com/emacs-lsp/lsp-mode
 
 markdown_extensions:
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - codehilite
   - meta
   - toc:
