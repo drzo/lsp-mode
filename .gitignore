@@ -59,3 +59,4 @@ docs/page/lsp-*.md
 /docs/page/CHANGELOG.md
 /docs/examples/
 docs/README.md
+.env
